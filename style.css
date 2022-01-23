@@ -175,3 +175,59 @@ body {
   opacity: 0.8;
 }
 /* NAV 2 END */
+
+/* NAV 3 START */
+
+.nav3 {
+  position: fixed;
+  bottom: 60px;
+  right: 350px;
+}
+
+.bottomnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 75px;
+  background: crimson;
+  /*  border-radius: 45px; */
+  transition: all 0.5s ease;
+}
+
+.bottomnav:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+.bottomnav > div > .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+.bottomnav > div > .item:hover {
+  transition: all 1.5s ease;
+  transform: scale(1.5);
+  transform: rotate(360deg);
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selector {
+  display: none;
+  border-bottom: solid 5px white;
+}
+
+.selected {
+  padding-top: 5px;
+  display: block;
+}

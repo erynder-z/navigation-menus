@@ -18,3 +18,18 @@ const nav1 = (() => {
     toggleFloatContact.classList.toggle("hidden");
   });
 })();
+
+const nav3 = (() => {
+  const items = document.querySelectorAll(".wrap");
+
+  items.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const getSelector = item.childNodes[3];
+      getSelector.classList.add("selected");
+    });
+    item.addEventListener("mouseleave", () => {
+      const getSelector = item.childNodes[3];
+      getSelector.classList.remove("selected");
+    });
+  });
+})();
