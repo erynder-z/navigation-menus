@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
 /* NAV 1 START */
 .float {
   position: fixed;
@@ -10,6 +21,7 @@
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+  transition: all 0.5s;
 }
 
 .float:hover {
@@ -49,41 +61,117 @@
 .hidden {
   display: none;
 }
+/* NAV 1 END */
 
-@media (max-width: 28.75em) {
-  .float {
-    bottom: 40px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-  }
+/* NAV 2 START */
 
-  .menu {
-    padding-top: 20px;
-    font-size: 22px;
-  }
+.nav2 {
+  position: fixed;
+  bottom: 35px;
+  right: 150px;
+}
+.triggerButton {
+  display: none;
+}
 
-  #myfloat-totop {
-    bottom: 200px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-  }
+.triggerButton + label {
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  background-color: #1a374d;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
 
-  .arrow {
-    padding-top: 20px;
-    font-size: 22px;
-  }
+.triggerButton + label:before,
+.triggerButton + label:after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 0.5em;
+  transition: all 0.25s;
+}
 
-  #myfloat-contact {
-    bottom: 120px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-  }
+.triggerButton + label:before {
+  width: 0.25em;
+}
 
-  .envelope {
-    padding-top: 20px;
-    font-size: 22px;
-  }
-} /* NAV 1 END */
+.triggerButton + label:after {
+  height: 0.25em;
+}
+
+.triggerButton + label:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+.triggerButton:checked + label:before {
+  transform: rotatez(-45deg);
+}
+
+.triggerButton:checked + label:after {
+  transform: rotatez(-45deg);
+}
+
+.one,
+.two,
+.three {
+  cursor: pointer;
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  transform: rotateZ(90deg);
+  font-size: 1em;
+  color: #fff;
+  transition-property: all;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triggerButton:checked ~ .one,
+.triggerButton:checked ~ .two,
+.triggerButton:checked ~ .three {
+  opacity: 1;
+}
+
+.triggerButton:checked ~ .one {
+  background-color: #406882;
+  transform: translateX(-5em);
+  transition-delay: 0.2s;
+}
+
+.triggerButton:checked ~ .two {
+  background-color: #6998ab;
+  transform: translateX(-3.5em) translateY(-3.5em);
+  transition-delay: 0.1s;
+}
+
+.triggerButton:checked ~ .three {
+  background-color: #b1d0e0;
+  transform: translateY(-5em);
+}
+
+.triggerButton:checked ~ .one:hover,
+.triggerButton:checked ~ .two:hover,
+.triggerButton:checked ~ .three:hover {
+  opacity: 0.8;
+}
+/* NAV 2 END */
