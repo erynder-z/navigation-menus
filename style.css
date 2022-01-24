@@ -244,3 +244,83 @@ body {
     right: 20%;
   }
 }
+/* NAV 3 END */
+
+/* NAV 4 START */
+.sidebar {
+  position: fixed;
+  min-height: 50vh;
+  top: 25%;
+  left: -15%;
+  width: 20vw;
+  transition: all 0.5s;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  background: #24a19dda;
+  color: #faeee7;
+  border-radius: 25px;
+  display: flex;
+}
+
+.sidebar-wrapper-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.upper-sidebar,
+.lower-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding-left: 25px;
+}
+
+.upper-sidebar {
+  justify-content: space-evenly;
+}
+
+.lower-sidebar {
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  position: relative;
+  left: 15%;
+  height: 50vh;
+  width: 1rem;
+  transition: all 0.5s;
+}
+
+.expand {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.slide {
+  left: -3vw;
+  transition: all 0.5s;
+}
+
+@media all and (max-width: 500px) {
+  .sidebar {
+    width: 40vw;
+    left: -33%;
+  }
+  .toggle {
+    left: 2vw;
+  }
+
+  .slide {
+    left: -6vw;
+  }
+}
+
+/* NAV 4 END */

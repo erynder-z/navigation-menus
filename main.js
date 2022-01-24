@@ -33,3 +33,12 @@ const nav3 = (() => {
     });
   });
 })();
+
+const nav4 = (() => {
+  const toggle = document.getElementById("sidebarToggle");
+  const sidebar = document.getElementById("sidebar");
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("slide");
+    toggle.classList.toggle("expand");
+  });
+})();
