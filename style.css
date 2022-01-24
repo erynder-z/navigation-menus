@@ -324,3 +324,46 @@ body {
 }
 
 /* NAV 4 END */
+
+/* NAV 5 START */
+
+.tab {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+}
+
+.tab-item {
+  display: flex;
+  min-height: 100%;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  opacity: 0.6;
+}
+
+.tab-item:active,
+.tab-item:hover {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.tab-item:nth-child(1) {
+  background: cornflowerblue;
+}
+
+.tab-item:nth-child(2) {
+  background: green;
+}
+
+.tab-item:nth-child(3) {
+  background: yellow;
+}
+
+.tab-item:nth-child(4) {
+  background: orange;
+}
+
+/* NAV 5 END */
