@@ -10,12 +10,18 @@ body {
 }
 
 /* NAV 1 START */
-.float {
+
+.nav1 {
   position: fixed;
+  left: 150px;
+  bottom: 125px;
+}
+.float {
+  position: absolute;
   width: 80px;
   height: 80px;
-  bottom: 175px;
-  right: 50px;
+  bottom: 0px;
+  right: 0px;
   background: #7e40b9;
   color: #fff;
   border-radius: 50px;
@@ -37,8 +43,7 @@ body {
 #myfloat-totop {
   width: 80px;
   height: 80px;
-  bottom: 375px;
-  right: 50px;
+  bottom: 200px;
 }
 
 .arrow {
@@ -49,8 +54,7 @@ body {
 #myfloat-contact {
   width: 80px;
   height: 80px;
-  bottom: 275px;
-  right: 50px;
+  bottom: 100px;
 }
 
 .envelope {
@@ -67,8 +71,8 @@ body {
 
 .nav2 {
   position: fixed;
-  bottom: 35px;
-  right: 150px;
+  bottom: 0;
+  right: 20px;
 }
 .triggerButton {
   display: none;
@@ -77,8 +81,8 @@ body {
 .triggerButton + label {
   cursor: pointer;
   position: absolute;
-  right: 1em;
-  bottom: 1em;
+  right: 0;
+  bottom: 0;
   background-color: #1a374d;
   height: 80px;
   width: 80px;
@@ -186,7 +190,7 @@ body {
 
 .nav3 {
   position: fixed;
-  bottom: 60px;
+  bottom: 10px;
   right: 350px;
 }
 
