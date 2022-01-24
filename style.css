@@ -85,7 +85,7 @@ body {
 
 .nav2 {
   position: fixed;
-  bottom: 0;
+  bottom: 125px;
   right: 20px;
 }
 .triggerButton {
@@ -193,11 +193,6 @@ body {
   opacity: 0.8;
 }
 
-@media all and (max-width: 500px) {
-  .nav2 {
-    bottom: 20%;
-  }
-}
 /* NAV 2 END */
 
 /* NAV 3 START */
@@ -205,7 +200,8 @@ body {
 .nav3 {
   position: fixed;
   bottom: 10px;
-  right: 350px;
+  left: 50%;
+  width: 100vw;
 }
 
 .bottomnav {
@@ -215,7 +211,6 @@ body {
   width: 250px;
   height: 75px;
   background: crimson;
-  /*  border-radius: 45px; */
   transition: all 0.5s ease;
 }
 
@@ -258,8 +253,11 @@ body {
 
 @media all and (max-width: 500px) {
   .nav3 {
-    bottom: 1;
-    right: 20%;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
   }
 }
 /* NAV 3 END */
