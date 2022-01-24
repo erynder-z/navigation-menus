@@ -9,6 +9,20 @@ body {
   margin: 0;
 }
 
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background: tomato;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
 /* NAV 1 START */
 
 .nav1 {
